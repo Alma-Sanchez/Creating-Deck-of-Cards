@@ -1,0 +1,136 @@
+/*// includes bootstrap and scss preprocessor; feel free to use either, both, or neither!*/
+
+/*===== General classes =====*/
+.rotate{
+	transform: rotate(180deg);
+}
+.bottom-right{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+.red-suit{
+	color: red;
+}
+
+/*===== deck classes =====*/
+.deck-container{
+	display: flex;
+	flex-direction: row;
+	width: 700px;
+	margin: 10px auto;
+}
+.suit-column{
+	margin-right: 10px;
+}
+.card-face{
+	margin-bottom: 5px;
+	padding: 0;
+	width: 200px;
+  height: 250px;
+  /*float: left;*/
+	border: 2px solid black;
+	border-radius: 10px;
+	position: relative;
+}
+.corner-elements{
+	padding: 0px 5px; 
+	font-size: 28pt;
+}
+.corner-bottom-1{ /*Hearts & clubs*/
+	position: absolute;
+	top: 23px;
+	left: 7px;
+}
+.corner-bottom-2{ /*spades & diamonds*/
+	position: absolute;
+	top: 23px;
+	left: 8px;
+}
+.corner-bottom-3{ /*special ones*/
+	position: absolute;
+	top: 20px;
+	left: 9px;
+}
+.cornerJ{
+	position: absolute;
+	top: 25px;
+	left: 5px;
+}
+.cornerQ{
+	position: absolute;
+	top: 27px;
+	left: 11px;
+}
+.cornerK{
+	position: absolute;
+	top: 25px;
+	left: 10px;
+}
+.corner-bottom-10{
+	position: absolute;
+	top: 20px;
+	left: 16px;
+}
+.card-number{ //span
+	font-size: 24pt;
+	position: absolute;
+	top: 0px;
+	left: 8px;
+}
+
+/*===== Specific Card Styles =====*/
+.special-card{ /*Faces*/
+	text-align: center;
+	padding-top: 45px;
+	font-size: 85pt;
+}
+/*     Columns in middle
+					x		x		x
+							o      <- special top middle case
+					x		x		x
+					
+					o		o		o  <- special middle case
+
+					x		x		x
+					  	o 		<- special bottom middle case
+					x		x		x
+*/
+.slots{
+	font-size: 52pt;
+}
+.col0{
+	position: absolute; left: 33px;
+}
+.col1{
+	position: absolute; left: 76px;
+}
+.col2{
+	position: absolute; left: 119px;
+}
+.row0{
+	top: 10px;
+}
+.row1{
+	top: 55px;
+}
+.row2{ 
+	top: 100px;
+}
+.row3{
+	top: 145px;
+}
+.row4{ /*special middle case*/
+	top: 80px;
+}
+.row5{ /*special top middle case*/
+	top: 40px;
+}
+.row6{ /*special top middle case*/
+	top: 120px;
+}
+
+/*===== Debugging classes =====*/
+.border{
+	border: 1px solid red;
+}
