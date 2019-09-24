@@ -1,5 +1,9 @@
 /*// includes bootstrap and scss preprocessor; feel free to use either, both, or neither!*/
 /*===== General classes =====*/
+body {
+  padding: 10px 25px;
+}
+
 .rotate {
   transform: rotate(180deg);
 }
