@@ -1,29 +1,61 @@
-/*// includes bootstrap and scss preprocessor; feel free to use either, both, or neither!*/
 /*===== General classes =====*/
 body {
   padding: 10px 25px;
+  background: #151515;
+  color: #FFFFFF;
+}
+
+h1 {
+  font-size: 28pt;
+  text-align: center;
+  border-bottom: 1px solid #EAEAEA;
+  padding-bottom: 10px;;
+  margin-bottom: 60px;
+}
+
+h2 {
+  font-size: 21pt;
+  font-weight: 100;
+  margin-bottom: 35px;
+}
+
+main {
+  min-width: 650px;
+  width: 55%;
+  padding: 5px 20px;
+  margin: 0 auto;
+}
+
+a {
+  float: right;
+}
+
+h2 small {
+  font-size: 11pt;
+  color: #FFFFFF;
+}
+
+p {
+  font-size: 12pt;
+  line-height: 2;
+}
+
+img {
+  width: 200px;
+  display: block;
+  margin-bottom: 100px;
 }
 
 .rotate {
   transform: rotate(180deg);
 }
 
-.bottom-right {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-}
-
-.red-suit {
-  color: red;
-}
-
 /*===== deck classes =====*/
 .deck-container {
   display: flex;
   flex-direction: row;
-  width: 700px;
-  margin: 10px auto;
+  justify-content: center;
+  color: #000000;
 }
 
 .suit-column {
@@ -31,19 +63,31 @@ body {
 }
 
 .card-face {
-  margin-bottom: 5px;
-  padding: 0;
   width: 200px;
   height: 250px;
-  /*float: left;*/
-  border: 2px solid black;
+  background-color: #FFFFFF;
+  margin-bottom: 5px;
+  padding: 0;
+  border: 2px solid #000000;
   border-radius: 10px;
   position: relative;
 }
 
+.red-suit {
+  color: red;
+}
+
+/*===== Numbers and symbols on card corners =====*/
 .corner-elements {
   padding: 0px 5px;
   font-size: 28pt;
+}
+
+.card-number {
+  font-size: 24pt;
+  position: absolute;
+  top: 0px;
+  left: 8px;
 }
 
 .corner-bottom-1 {
@@ -91,11 +135,11 @@ body {
   left: 16px;
 }
 
-.card-number {
-  font-size: 24pt;
+/* @TODO: Figure what this is for */
+.bottom-right {
   position: absolute;
-  top: 0px;
-  left: 8px;
+  bottom: 0px;
+  right: 0px;
 }
 
 /*===== Specific Card Styles =====*/
@@ -107,15 +151,15 @@ body {
 }
 
 /*     Columns in middle
-					x		x		x
-							o      <- special top middle case
-					x		x		x
-					
-					o		o		o  <- special middle case
+  x		x		x
+      o      <- special top middle case
+  x		x		x
+  
+  o		o		o  <- special middle case
 
-					x		x		x
-					  	o 		<- special bottom middle case
-					x		x		x
+  x		x		x
+      o 		<- special bottom middle case
+  x		x		x
 */
 .slots {
   font-size: 52pt;
